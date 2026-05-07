@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>AID-IN — Thyroid Nodule Decision Tool · WashU Medicine (Alpha)</title>
+<link rel="stylesheet" href="./styles_v3.css"/>
+</head>
+<body>
+<div id="root"></div>
+
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+
+<!-- Content lives here so the study team can edit without code changes.
+     NOTE: this inline block is the canonical source for the alpha prototype.
+     Do not change the numbers. See README.md for editing guidance. -->
+<script type="application/json" id="aid-content"></script>
+
+<script>
+  // Load content_v3.json and inject into the inline script tag above, then boot React via app_v3.js.
+  (async function boot() {
+    try {
+      const res = await fetch("./content_v3.json");
+      const json = await res.json();
+      window.__AID_CONTENT__ = json;
+      document.getElementById('aid-content').textContent = JSON.stringify(json);
+      window.__AID_READY__ = true;
+      window.dispatchEvent(new Event('aid-content-ready'));
+    } catch (err) {
+      console.error('Failed to load content_v3.json', err);
+      document.getElementById('root').innerHTML = '<div style="padding:40px;font-family:sans-serif;max-width:600px;margin:auto"><h1>Could not load content.</h1><p>This app needs <code>content_v3.json</code> served from the same folder as this page under HTTP(S). If you opened this file directly from disk (<code>file://</code>), use a local server instead, for example <code>python3 -m http.server 8000 --directory dist</code> after <code>npm run build</code>, then visit <code>http://localhost:8000/</code>.</p></div>';
+    }
+  })();
+</script>
+
+<script defer src="./app_v3.js"></script>
+</body>
+</html>

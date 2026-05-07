@@ -1,0 +1,258 @@
+{
+  "_note": "Single source of clinical truth for the AID-IN decision aid (WashU Medicine alpha). Edit this file to update content without touching code. Numbers are verbatim from the study team's source document. Do not paraphrase numeric estimates. Superscript citations map to the `references` array by index (1-based).",
+  "title": "Thyroid Nodule Decision Tool",
+  "subtitle": "A decision aid for people with an indeterminate thyroid nodule",
+  "welcome": {
+    "heading": "Why you are getting this booklet",
+    "lede": "You have a thyroid nodule that was biopsied and reported as indeterminate, which means the biopsy could not clearly tell if the nodule is benign (not cancer) or cancer.",
+    "body": "There is more than one reasonable way to manage an indeterminate thyroid nodule. This booklet is designed to help you:",
+    "bullets": [
+      "Understand what an indeterminate thyroid nodule is",
+      "Learn about the different options for managing it",
+      "Compare the benefits and risks of each option",
+      "Think about what matters most to you so you can decide together with your care team"
+    ],
+    "closing": "Bring this with you to your clinic visits so you can use it to talk with your physician.",
+    "orientation": {
+      "time": "About 15–25 minutes. You can pause and come back.",
+      "purpose": "This tool helps you prepare for your next visit.",
+      "limits": "It does not tell you what to choose and does not replace a conversation with your clinicians.",
+      "storage": "Your answers are saved only in this browser tab. If you close the tab, they will be lost unless you print or save them."
+    }
+  },
+  "howToRead": {
+    "heading": "How to read the numbers in this booklet",
+    "body": [
+      "Whenever possible, we show risk as “out of 100 people”. Example: “About 10 out of 100 people”.",
+      "The numbers are best estimates based on current research. They are approximate, not guarantees.",
+      "Your own risk may be somewhat higher or lower because of your age, other health problems, nodule size, and other factors.",
+      "Words like “uncommon” or “rare” are paired with a number so that you can see what they mean more clearly.",
+      "You and your clinician can discuss how these numbers apply to your specific situation."
+    ],
+    "demo": {
+      "label": "Example (not medical information)",
+      "caption": "Out of 100 umbrellas in this picture, between 30 and 50 are blue. The rest are gray.",
+      "lower": 30,
+      "upper": 50,
+      "total": 100,
+      "affectedLabel": "Blue umbrellas",
+      "unaffectedLabel": "Gray umbrellas"
+    }
+  },
+  "cancerRisk": {
+    "heading": "How likely is it that my nodule is cancer?",
+    "intro": "Most indeterminate thyroid nodules are benign, which means not cancerous.",
+    "baseline": {
+      "statement": "Out of 100 people with an indeterminate thyroid nodule like yours, about 12 to 34 out of 100 will have cancer. The other 66 to 88 out of 100 will not have cancer.",
+      "lower": 12,
+      "upper": 34,
+      "citations": [1]
+    },
+    "molecular": {
+      "intro": "If you have a molecular (genetic) test of your nodule, the results may give a better estimate of your risk of cancer.",
+      "negative": {
+        "statement": "If 100 patients undergo molecular testing and the test is negative, then only 1 to 4 out of 100 (1–4%) will ultimately have cancer. The remaining 96 to 99 out of 100 will have a benign nodule.",
+        "lower": 1,
+        "upper": 4,
+        "citations": [2, 3]
+      },
+      "positive": {
+        "statement": "If 100 patients undergo molecular testing and the test is positive, then 47 to 65 out of 100 (47–65%) will ultimately have cancer. Approximately 35 to 53 out of 100 will not have cancer.",
+        "lower": 47,
+        "upper": 65,
+        "citations": [2, 3]
+      }
+    },
+    "closing": "At the time of your office visit, your clinician can discuss the numbers with you in more detail."
+  },
+  "options": [
+    {
+      "id": "surveillance",
+      "name": "Active surveillance",
+      "alias": "Observation",
+      "shortDescription": "No surgery now. The nodule is watched over time with ultrasound and physical exams.",
+      "icon": "eye",
+      "anatomyHighlight": "none"
+    },
+    {
+      "id": "ablation",
+      "name": "Thermal ablation",
+      "alias": "",
+      "shortDescription": "A minimally invasive procedure that uses heat to shrink or destroy the nodule, usually under local anesthesia.",
+      "icon": "wave",
+      "anatomyHighlight": "none"
+    },
+    {
+      "id": "lobectomy",
+      "name": "Diagnostic lobectomy",
+      "alias": "Partial thyroidectomy",
+      "shortDescription": "Surgery to remove the half of the thyroid that contains the nodule.",
+      "icon": "half",
+      "anatomyHighlight": "left"
+    },
+    {
+      "id": "total",
+      "name": "Total thyroidectomy",
+      "alias": "Remove whole thyroid",
+      "shortDescription": "Surgery to remove the entire thyroid gland.",
+      "icon": "full",
+      "anatomyHighlight": "both"
+    }
+  ],
+  "optionsIntro": "There are four options to manage an indeterminate thyroid nodule. Not all options may be a good fit for you based on your situation and values. Your doctor will help you understand which options are reasonable for you. This isn’t a decision that has to be made right now.",
+  "comparison": {
+    "rows": [
+      { "id": "involves", "label": "What does this option involve?" },
+      { "id": "appropriate", "label": "When might this option be appropriate for me?" },
+      { "id": "recovery", "label": "What is the recovery like?" },
+      { "id": "followup", "label": "What additional care will I need over the next 5 years?" },
+      { "id": "regrowth", "label": "What is the chance the nodule grows or comes back?" },
+      { "id": "hormone", "label": "Will I need thyroid hormone for the rest of my life?" },
+      { "id": "risks", "label": "What are the possible risks and side effects?" },
+      { "id": "outlook", "label": "If this nodule is cancer, what is my outlook?" },
+      { "id": "costs", "label": "What about costs and practical issues?" }
+    ],
+    "cells": {
+      "surveillance": {
+        "involves": { "text": "No surgery now. Repeat office visits to watch your nodule over time. No change in your usual activities." },
+        "appropriate": { "text": "Usually considered when the nodule is small, not causing symptoms, has no high-risk features for cancer, and molecular testing (if done) suggests a low chance of cancer, and you feel comfortable with close follow-up to watch for growth." },
+        "recovery": { "text": "There is no recovery period." },
+        "followup": { "text": "Ultrasound and physical exam of the neck every 6 to 12 months to check for changes in the nodule. If the nodule grows or looks more concerning, you may need a repeat biopsy, testing, or surgery." },
+        "regrowth": { "text": "Over many years of follow-up, about 10 to 20 out of 100 people may need surgery because the nodule grows or causes symptoms. Some of these people later decide to have surgery or another treatment.", "frequency": { "lower": 10, "upper": 20, "citations": [13, 14], "kind": "later-surgery" } },
+        "hormone": { "text": "No. You do not need thyroid hormone replacement with surveillance, unless you already have or later develop an underactive thyroid for other reasons.", "frequency": { "lower": 0, "upper": 0, "kind": "none" } },
+        "risks": { "text": "One risk is a delay in finding a cancer if it is present. If you have molecular testing and the result is negative, about 96 out of 100 people have a benign nodule and about 4 out of 100 still have a cancer that was not detected. Active surveillance also means living with ongoing monitoring, which some people find stressful. Worry or uncertainty about ‘watching’ a nodule and the need for repeated visits and tests can be an important emotional burden.", "frequency": { "lower": 4, "upper": 4, "kind": "missed-cancer" } },
+        "outlook": { "text": "Most thyroid cancers found in this situation are papillary thyroid cancers, which are usually slow-growing and highly treatable. People who are monitored closely and have surgery later, if the nodule changes or grows, have outcomes similar to those who had surgery right away, although there is less long-term information. If cancer is confirmed later and you undergo surgery at that time, treatment is usually still very effective.", "citations": [15] },
+        "costs": { "text": "Costs include follow-up visits and periodic thyroid ultrasounds, and sometimes repeat biopsies or molecular tests. There is no surgical bill unless you later decide to have surgery." }
+      },
+      "ablation": {
+        "involves": { "text": "A probe is inserted through the skin into the nodule using ultrasound guidance. Heat is used to destroy the nodule. The ablation is usually done with local anesthesia (numbing medicine) with light sedation. You go home the same day.", "uncertainty": "Long-term data for thermal ablation of indeterminate nodules are limited." },
+        "appropriate": { "text": "Usually considered when your nodule is not high risk based on biopsy and, if done, molecular testing suggests a low chance of cancer. It is generally used when the nodule is causing symptoms or cosmetic concerns and you prefer to avoid surgery or are not a good candidate for surgery." },
+        "recovery": { "text": "Soreness or bruising in the neck for a few days is common. Most people can do light activities shortly after the procedure and return to usual activities in about 3 days." },
+        "followup": { "text": "Ultrasound and physical exam of the neck to monitor the treated nodule at about 1, 6, and 12 months, then every 1 to 2 years to confirm that the nodule stays smaller and symptoms remain improved." },
+        "regrowth": { "text": "Over the first few years, 2 to 10 out of 100 people (2–10%) who have thermal ablation have their nodule grow or need additional treatment for the same nodule. There is less available information about long-term outcome for this treatment.", "frequency": { "lower": 2, "upper": 10, "citations": [5, 6], "kind": "regrowth" }, "uncertainty": "Long-term data are limited." },
+        "hormone": { "text": "The risk is very low: 1 to 4 in 100 people (1–4%) need thyroid hormone because the thyroid is left in place. Thyroid function usually remains stable after ablation.", "frequency": { "lower": 1, "upper": 4, "citations": [9, 10], "kind": "hormone" } },
+        "risks": { "text": "A risk is that the nodule can grow back. About 10 to 15 out of 100 people (10–15%) will need another ablation or surgery within 3 to 5 years. Rare but more serious risks include injury to nearby structures or significant bleeding. Most side effects are mild and short term, such as pain, bruising, or swelling where the needle was placed.", "frequency": { "lower": 10, "upper": 15, "citations": [15], "kind": "retreatment" } },
+        "outlook": { "text": "Your outlook is generally very good. Most thyroid cancers in this setting are papillary thyroid cancers, which are usually slow-growing and highly treatable. Long-term information for people who later turn out to have cancer after ablation is more limited than for surgery, but when surgery is needed later it is usually still effective.", "uncertainty": "Long-term data are limited." },
+        "costs": { "text": "Up-front procedural cost for ablation, usually as an outpatient, and follow-up imaging. If successful, it may prevent the need for surgery and reduce how often you must follow up long term. Because ablation is newer, insurance coverage can vary." }
+      },
+      "lobectomy": {
+        "involves": { "text": "Surgery under general anesthesia to remove the half of the thyroid that contains the nodule. The other half of the gland is left in place. You may go home the same day or spend a night overnight." },
+        "appropriate": { "text": "If your nodule is on one side of the thyroid, is not very large (often smaller than about 4 cm), and your biopsy or other tests suggest a nodule that appears low risk and limited to that side — or the results are still uncertain and you prefer surgery to get a definite diagnosis." },
+        "recovery": { "text": "Sore throat and neck discomfort for several days. Most people can do light activities within a few days after surgery and return to usual activities in about 1 to 2 weeks." },
+        "followup": { "text": "Thyroid hormone blood tests to see if you need replacement hormone. If cancer is found, you may need additional imaging and tests to watch for cancer coming back." },
+        "regrowth": { "text": "The removed lobe does not grow back. For the most common kind of thyroid cancer, 1 to 5 out of 100 people had cancer come back over 10 years. The chance is higher if the remaining nodules are large or had concerning biopsy results.", "frequency": { "lower": 1, "upper": 5, "citations": [4], "kind": "recurrence-10y" } },
+        "hormone": { "text": "About 26 to 47 in 100 people (26–47%) eventually need thyroid hormone replacement because the remaining thyroid does not make enough hormone. Your chance is higher if your thyroid tests were borderline before surgery.", "frequency": { "lower": 26, "upper": 47, "citations": [7, 8], "kind": "hormone" } },
+        "risks": { "text": "Serious bleeding that needs an urgent return to the operating room happens in about 1 out of 100 people. Short-term risks are similar to total thyroidectomy but usually milder — for example, temporary hoarseness and brief low calcium — and serious complications are uncommon. About 1 out of 100 people have lasting hoarseness or voice change from nerve injury. Long-lasting low calcium is rare because part of the thyroid and parathyroid glands remain. There is a small risk of needing a second surgery if the final biopsy shows a higher-risk cancer than expected.", "frequency": { "lower": 1, "upper": 1, "citations": [11, 12], "kind": "hoarseness" } },
+        "outlook": { "text": "Your outlook is also excellent. If the final biopsy shows a cancer that has higher-risk features, you may need a second surgery to remove the remaining thyroid or additional treatment, but outcomes remain very good. Most thyroid cancers treated this way are slow-growing and highly treatable." },
+        "costs": { "text": "Similar surgical costs to total thyroidectomy, sometimes slightly lower. You may avoid lifelong thyroid hormone, but you still have the costs of follow-up visits, imaging, and possible thyroid hormone treatment." }
+      },
+      "total": {
+        "involves": { "text": "Surgery under general anesthesia to remove the entire thyroid gland through an incision in the lower neck. You may go home the same day or spend a night overnight." },
+        "appropriate": { "text": "If any of the following apply: (1) your nodule is larger than 4 cm, (2) your molecular test shows a high chance of cancer, (3) you have a strong family history of thyroid cancer, (4) you had radiation to the head or neck before, or (5) there are other worrisome features on exam or ultrasound." },
+        "recovery": { "text": "Sore throat and neck discomfort for several days. Most people can do light activities within a few days after surgery and return to usual activities in about 1 to 2 weeks." },
+        "followup": { "text": "Thyroid hormone blood tests to adjust your dose of replacement hormone. If cancer is found in the removed thyroid, you may have additional blood tests and imaging to watch for cancer coming back." },
+        "regrowth": { "text": "The part of the thyroid that contained the nodule has been removed, so that nodule cannot grow back. New nodules or thyroid cancer in remaining neck tissue are rare. For the most common kind of thyroid cancer, fewer than 5 out of 100 people had cancer come back over 10 years.", "frequency": { "lower": 0, "upper": 5, "kind": "recurrence-10y", "note": "fewer than 5 out of 100" } },
+        "hormone": { "text": "Yes. Removing the whole thyroid means you will need lifelong thyroid hormone pills. The dose may need adjustment over time.", "frequency": { "lower": 100, "upper": 100, "kind": "hormone" } },
+        "risks": { "text": "Serious bleeding that needs an urgent return to the operating room happens in about 1 out of 100 people. Common short-term side effects include temporary hoarseness, low blood calcium for a few days, and minor bleeding or infection. Longer-lasting problems are less common. About 1 to 25 out of 100 people may have low calcium levels that require lifelong calcium or vitamin D supplements, and about 1 out of 100 may have a lasting hoarseness or voice change from nerve injury.", "frequency": { "lower": 1, "upper": 25, "citations": [11, 12], "kind": "low-calcium" } },
+        "outlook": { "text": "Your overall outlook is excellent. It still depends on the exact cell type and features of the cancer. Most thyroid cancers are slow-growing and highly treatable. Overall, about 98 out of 100 people are alive at 5 years, and fewer than 2 out of 100 die from thyroid cancer.", "frequency": { "lower": 98, "upper": 98, "kind": "survival" } },
+        "costs": { "text": "One-time surgery, operating room and hospital costs, and the ongoing cost of thyroid hormone replacement and lab monitoring. Depending on your insurance, you may have deductibles, copayments, or coinsurance. Time off from work or caregiving is usually needed for surgery and early recovery." }
+      }
+    }
+  },
+  "values": {
+    "heading": "What matters most to you?",
+    "intro": "People value different things when making this decision. For each statement, mark how important it is to you. There are no right answers. Your responses are for your own reflection and to share with your clinician — the tool will not score them or recommend an option.",
+    "scale": [
+      "Not at all important",
+      "A little important",
+      "Somewhat important",
+      "Very important",
+      "Extremely important"
+    ],
+    "statements": [
+      "I would feel better knowing the nodule is removed and examined, even if it turns out to be benign.",
+      "I prefer to avoid surgery unless it is clearly needed.",
+      "I strongly prefer to avoid the possibility of voice changes, even if that means more follow-up.",
+      "Taking a pill every day for life is acceptable to me if it reduces future risk or uncertainty.",
+      "Having frequent follow-up visits and ultrasounds would be a burden for me.",
+      "I am comfortable watching and waiting if the chance of cancer is low."
+    ],
+    "closing": "You can share your answers with your clinician to help guide the decision."
+  },
+  "questions": {
+    "heading": "Questions you may want to ask your clinician",
+    "intro": "Check the questions you want to bring to your appointment, and add your own.",
+    "sections": [
+      {
+        "id": "risk",
+        "title": "About my nodule and my risk",
+        "items": [
+          "What is the size of my nodule?",
+          "Based on my biopsy and any molecular tests, what is the chance my nodule is cancer?",
+          "Are there features on ultrasound or exam that increase or decrease that chance?"
+        ]
+      },
+      {
+        "id": "options",
+        "title": "About each option",
+        "items": [
+          "Which options do you think are reasonable for me and why?",
+          "If I choose surgery, do you recommend lobectomy or total thyroidectomy for me?",
+          "How many thyroid surgeries do you perform each year? What are your rates of complications such as voice changes and low calcium?",
+          "If I choose observation, how often will I need ultrasounds and appointments? What changes would make you recommend surgery later?",
+          "If I choose thermal ablation, what is your experience with this procedure and how often do patients need another treatment later?"
+        ]
+      },
+      {
+        "id": "recovery",
+        "title": "About recovery and daily life",
+        "items": [
+          "How long should I plan to be away from work, school, or caregiving if I have surgery or ablation?",
+          "Will I need help at home after the procedure?",
+          "What symptoms should make me call your office or seek urgent care?"
+        ]
+      },
+      {
+        "id": "costs",
+        "title": "About costs and insurance",
+        "items": [
+          "Will my insurance cover molecular testing, surgery, or ablation?",
+          "Are there less expensive options for follow-up imaging or lab tests?",
+          "Who can I contact in the clinic or hospital to discuss financial concerns?"
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "heading": "Where can I learn more?",
+    "intro": "You may find these resources helpful. Each link opens in a new tab.",
+    "links": [
+      { "label": "American Thyroid Association (ATA)", "url": "https://www.thyroid.org/", "description": "Information on thyroid nodules, biopsies, and thyroid surgery written by clinicians." },
+      { "label": "Thyroid Cancer Survivors’ Association (ThyCa)", "url": "https://www.thyca.org/", "description": "Educational materials and support written by the leading thyroid disease patient support group." }
+    ],
+    "finalNotesHeading": "Final notes",
+    "finalNotes": [
+      "This booklet is meant to support, not replace, conversations with your clinicians.",
+      "Your values and preferences are an essential part of the decision.",
+      "Take your time, ask questions, and consider bringing a family member or friend to your appointments."
+    ]
+  },
+  "references": [
+    "Ali SZ, Baloch ZW, Cochand-Priollet B, Schmitt FC, Vielh P, VanderLaan PA. The 2023 Bethesda System for Reporting Thyroid Cytopathology. Thyroid. 2023;33(9):1039–1044. doi:10.1089/thy.2023.0141",
+    "Kandil E, Metz TA, Issa PP, et al. Diagnostic Performance of Afirma and Interpace Diagnostics Genetic Testing in Indeterminate Thyroid Nodules: A Single Center Study. Cancers. 2023;15(7):2098. doi:10.3390/cancers15072098",
+    "Nasr CE, Andrioli M, Endo M, et al. Real-World Performance of the Afirma Genomic Sequencing Classifier (GSC) — A Meta-analysis. J Clin Endocrinol Metab. 2022;108(6):1526–1532. doi:10.1210/clinem/dgac688",
+    "Miyauchi A, Ito Y, Fujishima M, et al. Long-Term Outcomes of Active Surveillance and Immediate Surgery for Adult Patients with Low-Risk Papillary Thyroid Microcarcinoma: 30-Year Experience. Thyroid. 2023;33(7):817–825. doi:10.1089/thy.2023.0076",
+    "Lim H, Cho SJ, Jeong Y, Jeong SY, Baek JH. Efficacy and Safety of Thermal Ablation for Indeterminate Thyroid Nodules: A Systematic Review and Meta-Analysis. Thyroid. 2025;35(7):748–762. doi:10.1089/thy.2024.0679",
+    "Issa PP, Omar M, Issa CP, et al. Radiofrequency Ablation of Indeterminate Thyroid Nodules: The First North American Comparative Analysis. Int J Mol Sci. 2022;23(19):11493. doi:10.3390/ijms231911493",
+    "Barranco H, Fazendin J, Lindeman B, Chen H, Ramonell KM. Thyroid hormone replacement following lobectomy: Long-term institutional analysis 15 years after surgery. Surgery. 2023;173(1):189–192. doi:10.1016/j.surg.2022.05.044",
+    "Wilson M, Patel A, Goldner W, Baker J, Sayed Z, Fingeret AL. Postoperative thyroid hormone supplementation rates following thyroid lobectomy. Am J Surg. 2020;220(5):1169–1173. doi:10.1016/j.amjsurg.2020.06.052",
+    "Sinclair CF, Baek JH, Hands KE, et al. General Principles for the Safe Performance, Training, and Adoption of Ablation Techniques for Benign Thyroid Nodules: An American Thyroid Association Statement. Thyroid. 2023;33(10):1150–1170. doi:10.1089/thy.2023.0281",
+    "Cho SJ, Baek JH, Chung SR, Choi YJ, Lee JH. Long-Term Results of Thermal Ablation of Benign Thyroid Nodules: A Systematic Review and Meta-Analysis. Endocrinol Metab. 2020;35(2):339–350. doi:10.3803/EnM.2020.35.2.339",
+    "Aspinall S, Oweis D, Chadwick D. Effect of surgeons’ annual operative volume on the risk of permanent hypoparathyroidism, recurrent laryngeal nerve palsy and haematoma following thyroidectomy: analysis of UKRETS. Langenbecks Arch Surg. 2019;404(4):421–430. doi:10.1007/s00423-019-01798-7",
+    "Tarallo M, Carlino C, Crocetti D, et al. Safety and Outcomes of Thyroid Surgery: A High-Volume Center Case Series and the Role of Intraoperative Neuromonitoring in Preventing Complications. J Clin Med. 2025;14(17):6077. doi:10.3390/jcm14176077",
+    "Ito Y, Miyauchi A. Active surveillance for low-risk papillary thyroid microcarcinomas. Ann Thyroid. 2020;5. doi:10.21037/aot-2020-rcmtt-06",
+    "Durante C, Costante G, Lucisano G, et al. The Natural History of Benign Thyroid Nodules. JAMA. 2015;313(9):926–935. doi:10.1001/jama.2015.0956",
+    "Li Y, Li W, Jiang B, Zhao J, Zhang Y, Luo Y. Analysis and prediction of regrowth in benign thyroid nodules undergoing radiofrequency ablation: a retrospective study with a 5-year follow-up. Eur Radiol. 2023;33(8):5615–5624. doi:10.1007/s00330-023-09481-8",
+    "Teliti M, Chytiris S, Coperchini F. Natural History of Cytologically Low-Risk Indeterminate Thyroid Nodules. J Clin Endocrinol Metab. 2025;110(5):e1297–e1302. doi:10.1210/clinem/dgaf052"
+  ]
+}

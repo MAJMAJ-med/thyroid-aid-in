@@ -4,9 +4,10 @@ Static site for GitHub Pages: pre-built React (JSX transpiled at deploy time), w
 
 ## Files
 
-- `index.html` — entry point (loads `./app_v3.js`, `./styles_v3.css`, fetches `./content_v3.json`)
+- `index.html` — entry point (loads `./vendor/react*.js`, `./app_v3.js`, `./styles_v3.css`, fetches `./content_v3.json`)
+- React / ReactDOM — pinned in **`package.json`**; production UMD bundles are copied into **`dist/vendor/`** at build time (same-origin on Pages; no CDN at runtime; build still uses npm like `@babel/*`)
 - `app_v3.jsx` — React source (edit UX here)
-- `build.js` — creates `dist/`: transpiles JSX → `app_v3.js`, copies static assets
+- `build.js` — creates `dist/`: transpiles JSX → `app_v3.js`, copies React UMD into `dist/vendor/`, copies static assets
 - `babel.config.json` — `@babel/preset-react` with **classic** runtime (required for React UMD globals)
 - `styles_v3.css` — WashU Medicine palette + type system
 - `content_v3.json` — clinical copy and numbers (edit without changing JSX; each deploy copies the latest file into `dist/`)

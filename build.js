@@ -31,6 +31,35 @@ execFileSync(
   { stdio: "inherit", cwd: root },
 );
 
+const vendorDir = path.join(root, "dist", "vendor");
+fs.mkdirSync(vendorDir, { recursive: true });
+
+const vendorCopies = [
+  [
+    path.join(root, "node_modules", "react", "umd", "react.production.min.js"),
+    path.join(vendorDir, "react.production.min.js"),
+  ],
+  [
+    path.join(
+      root,
+      "node_modules",
+      "react-dom",
+      "umd",
+      "react-dom.production.min.js",
+    ),
+    path.join(vendorDir, "react-dom.production.min.js"),
+  ],
+];
+for (const [src, dest] of vendorCopies) {
+  if (!fs.existsSync(src)) {
+    console.error(
+      `Missing vendor source: ${src}\nInstall dependencies: npm install`,
+    );
+    process.exit(1);
+  }
+  fs.copyFileSync(src, dest);
+}
+
 for (const file of [
   "index.html",
   "styles_v3.css",

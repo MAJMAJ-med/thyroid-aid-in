@@ -4,6 +4,10 @@
   "scripts": {
     "build": "node build.js"
   },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.26.0",
     "@babel/core": "^7.26.0",

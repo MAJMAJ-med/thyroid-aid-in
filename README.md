@@ -29,11 +29,14 @@ python3 -m http.server 8000 --directory dist
 # http://localhost:8000/
 ```
 
-## Publish with GitHub Actions
+## Publish to GitHub (new standalone repo)
 
-1. Create a repo and push **this folder as the repo root** (these files at top level).
-2. **Settings → Pages → Build and deployment → Source:** **GitHub Actions** (not “Deploy from a branch”).
-3. Pushes to **`main`** run `.github/workflows/deploy.yml`, build `dist/`, and deploy the artifact.
+This folder may have been cloned from **`~/Dev/thyroid-aid-in`**. First-time publishing: see **[`NEW_REPO_PUSH.md`](NEW_REPO_PUSH.md)** (`gh auth login`, create repo, push `main`, then **Settings → Pages → GitHub Actions**).
+
+## Publish with GitHub Actions (after the repo exists on GitHub)
+
+1. **Settings → Pages → Build and deployment → Source:** **GitHub Actions** (not “Deploy from a branch”).
+2. Pushes to **`main`** run `.github/workflows/deploy.yml`, build `dist/`, and deploy the artifact.
 
 Pages URL shape: `https://<username>.github.io/<repo>/`
 

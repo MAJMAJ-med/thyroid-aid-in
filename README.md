@@ -1,63 +1,40 @@
-# AID-IN Thyroid Nodule Decision Tool — Alpha (WashU Medicine)
+# AID-IN Thyroid Nodule Decision Tool
 
-Static site for GitHub Pages: pre-built React (JSX transpiled at deploy time), with copy and numbers loaded from JSON at runtime.
+AID-IN is a patient decision-support tool for people with indeterminate thyroid nodules. It is designed to support shared decision-making discussions with clinicians.
 
-## Files
+## Live site
 
-- `index.html` — entry point (loads `./vendor/react*.js`, `./app_v3.js`, `./styles_v3.css`, fetches `./content_v3.json`)
-- React / ReactDOM — pinned in **`package.json`**; production UMD bundles are copied into **`dist/vendor/`** at build time (same-origin on Pages; no CDN at runtime; build still uses npm like `@babel/*`)
-- `app_v3.jsx` — React source (edit UX here)
-- `build.js` — creates `dist/`: transpiles JSX → `app_v3.js`, copies React UMD into `dist/vendor/`, copies static assets
-- `babel.config.json` — `@babel/preset-react` with **classic** runtime (required for React UMD globals)
-- `styles_v3.css` — WashU Medicine palette + type system
-- `content_v3.json` — clinical copy and numbers (edit without changing JSX; each deploy copies the latest file into `dist/`)
-- `.nojekyll` — disables Jekyll on GitHub Pages; **copied into `dist/`** by the build
-- `package.json` — npm scripts and Babel devDependencies
+- https://majmaj-med.github.io/thyroid-aid-in/
 
-## Build
+## Important notice
+
+- This tool is for education and visit preparation.
+- It does not diagnose conditions or replace medical advice.
+- Patients should make care decisions with their clinical team.
+
+## Privacy
+
+- Answers are stored only in the browser session (`sessionStorage`) on the local device.
+- Data is not transmitted to a backend service by this application.
+
+## Content updates
+
+Most patient-facing text and numeric estimates are maintained in:
+
+- `content_v3.json`
+
+Updating this JSON file and pushing to `main` republishes the updated content via GitHub Pages.
+
+## Technical notes (maintainers)
+
+- Static GitHub Pages app.
+- `app_v3.jsx` is transpiled at build time to `dist/app_v3.js`.
+- `react` and `react-dom` UMD files are copied into `dist/vendor/` so runtime does not depend on external CDNs.
+
+Build locally:
 
 ```bash
-npm install   # generates package-lock.json — commit this file so GitHub Actions can run npm ci
+npm install
 npm run build
 ```
 
-Output is **`dist/`** — that folder is what gets deployed.
-
-Local preview (required for `fetch`; `file://` will not work):
-
-```bash
-python3 -m http.server 8000 --directory dist
-# http://localhost:8000/
-```
-
-## Publish to GitHub (new standalone repo)
-
-This folder may have been cloned from **`~/Dev/thyroid-aid-in`**. First-time publishing: see **[`NEW_REPO_PUSH.md`](NEW_REPO_PUSH.md)** (`gh auth login`, create repo, push `main`, then **Settings → Pages → GitHub Actions**).
-
-## Publish with GitHub Actions (after the repo exists on GitHub)
-
-1. **Settings → Pages → Build and deployment → Source:** **GitHub Actions** (not “Deploy from a branch”).
-2. Pushes to **`main`** run `.github/workflows/deploy.yml`, build `dist/`, and deploy the artifact.
-
-Pages URL shape: `https://<username>.github.io/<repo>/`
-
-### Content edits
-
-Change `content_v3.json`, commit, and push. CI rebuilds (JSX unchanged) and uploads a fresh `dist/` including the updated JSON. You do **not** need to edit `app_v3.jsx` for copy-only changes.
-
-Numbers are verbatim from the study team's source document. Do not paraphrase numeric estimates without the study team's review.
-
-## Notes
-
-- All patient responses live in `sessionStorage` on the device. Nothing is sent to a server.
-- This is an alpha research prototype. **Not for clinical use outside of the AID-IN study.**
-
-### Common pitfalls
-
-| Issue | What to check |
-|--------|----------------|
-| Broken assets on a **project** site | Use **relative** URLs (`./app_v3.js`, not `/app_v3.js`). |
-| Blank app on Pages | Deploy **`dist/`** output, not raw `app_v3.jsx`; run `npm run build` in CI. |
-| `fetch` fails locally | Do not open `index.html` via `file://`; serve `dist/` over HTTP. |
-
-©2026 Washington University School of Medicine

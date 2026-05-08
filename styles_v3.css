@@ -76,7 +76,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   margin: -28px -22px 20px;
 }
 .sidebar .brand {
-  font-family: var(--font-display); font-style: italic;
+  font-family: var(--font-display);
   font-size: 13px; color: var(--wu-red); letter-spacing: 0.02em;
   margin-bottom: 14px; text-transform: none;
 }
@@ -111,7 +111,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--rule);
   font-size: 11px; color: var(--ink-3); line-height: 1.5;
 }
-.sidebar-foot .foot-brand { font-family: var(--font-display); font-style: italic; color: var(--wu-red); font-size: 12px; }
+.sidebar-foot .foot-brand { font-family: var(--font-display); color: var(--wu-red); font-size: 12px; }
 
 /* ---------- main ---------- */
 .main { padding: 48px 56px 120px; max-width: 1100px; }
@@ -423,7 +423,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .matrix-wrapper { overflow: visible; }
   h2, h3, h4 { color: black; }
 }
-.ps-brand { font-family: var(--font-display); font-style: italic; color: var(--wu-red); font-size: 11pt; margin: 0 0 4px; }
+.ps-brand { font-family: var(--font-display); color: var(--wu-red); font-size: 11pt; margin: 0 0 4px; }
 .ps-h1 { font-family: var(--font-display); font-weight: 400; font-size: 20pt; margin: 0 0 4px; color: var(--wu-green-deep); }
 .ps-h2 { font-family: var(--font-display); font-weight: 400; font-size: 13pt; border-bottom: 1px solid #999; padding-bottom: 3px; margin: 16px 0 6px; color: var(--wu-green-deep); }
 .ps-meta { margin: 0 0 12px; color: #555; }

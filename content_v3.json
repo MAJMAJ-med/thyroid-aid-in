@@ -31,12 +31,12 @@
     ],
     "demo": {
       "label": "Example (not medical information)",
-      "caption": "Out of 100 umbrellas in this picture, between 30 and 50 are blue. The rest are gray.",
+      "caption": "Out of 100 circles in this picture, between 30 and 50 are red. The rest are gray.",
       "lower": 30,
       "upper": 50,
       "total": 100,
-      "affectedLabel": "Blue umbrellas",
-      "unaffectedLabel": "Gray umbrellas"
+      "affectedLabel": "Red circles",
+      "unaffectedLabel": "Gray circles"
     }
   },
   "cancerRisk": {

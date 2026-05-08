@@ -938,3 +938,13 @@ function App({ content }) {
 }
 
 window.App = App;
+
+function bootAidApp() {
+  const el = document.getElementById("root");
+  if (!el) return;
+  const root = ReactDOM.createRoot(el);
+  root.render(<App content={window.__AID_CONTENT__} />);
+}
+
+if (window.__AID_READY__) bootAidApp();
+else window.addEventListener("aid-content-ready", bootAidApp);
